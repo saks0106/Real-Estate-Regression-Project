@@ -1,0 +1,187 @@
+<html>
+<body>
+    <div class="login">
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>USA Real Estate Price Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Status of House</label>
+            <select class="form-control" name="property" placeholder="Status" required>
+                <option class="placeholder" selected disabled value="">Under Construction or Ready Property</option>
+                <option value="0">
+                    Under Construction
+                </option>
+                <option value="1">
+                    Ready Property
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Number of Bedrooms</label>
+            <input class="form-control" type="number" name="bedrooms"
+                placeholder="Enter number of bedrooms" min='0' max='200' />
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Number of Bathrooms</label>
+            <input class="form-control" type="number" name="bathrooms"
+                placeholder="Enter number of bathrooms" min='0' max='200'/>
+        </div>
+
+
+           <div class="mb-3">
+            <label class="form-label">Acre of Land</label>
+            <input class="form-control" type="number" name="acre_lot"
+                placeholder="Enter acre lot of land " min='0.0' max='100000.0' />
+        </div>
+
+
+           <div class="mb-3">
+            <label class="form-label">Select City</label>
+            <select class="form-control" name="city"
+                placeholder="city" required>
+                <option class="placeholder" selected disabled value="">Select city</option>
+                <option value="200013.33333333334">
+                    Abbot
+                </option>
+                <option value="452762.6915422886">
+                    Aberdeen
+                </option>
+                <option value="1402250.1762632197">
+                    Acton
+                </option>
+                <option value="347338.5137614679">
+                    Agawam
+                </option>
+                <option value="356060.70686070685">
+                    Bath
+                </option>
+                <option value="620705.073778664">
+                    Beacon
+                </option>
+                <option value="312443.0442477876">
+                    Blackwood
+                </option>
+                <option value="372492.63157894736">
+                    Cabo Rojo
+                </option>
+                <option value="1154545.4545454546">
+                    Canarsie
+                </option>
+                <option value="799861.6626506024">
+                    Canton
+                </option>
+                <option value="469703.56842105265">
+                    Danvers
+                </option>
+                <option value="316337.34285714285">
+                   Delaware City
+                </option>
+                <option value="763796.875">
+                    East Boston
+                </option>
+                <option value="824639.9399684045">
+                    East Falmouth
+                </option>
+                <option value="1540375.0">
+                    East Marion
+                </option>
+                <option value="60950.0">
+                    Eastbrook
+                </option>
+                <option value="200341.17647058822">
+                    Folcroft
+                </option>
+                <option value="288549.01960784313">
+                    Glenburn
+                </option>
+            </select>
+        </div>
+
+
+
+
+           <div class="mb-3">
+            <label class="form-label">Select State</label>
+            <select class="form-control" name="state"
+                placeholder="state" required>
+                <option class="placeholder" selected disabled value="">Select state</option>
+                <option value="591375.5355793803">
+                    Connecticut
+                </option>
+                <option value="345206.59276655706">
+                    Delaware
+                </option>
+                <option value="492703.6">
+                    Georgia
+                </option>
+                <option value="420010.04963165073">
+                    Maine
+                </option>
+                <option value="975750.5218490368">
+                    Massachusetts
+                </option>
+                <option value="480767.8652955598">
+                    New Hampshire
+                </option>
+                <option value="624954.6459613522">
+                    New Jersey
+                </option>
+                <option value="1516810.6197325748">
+                    New York
+                </option>
+                <option value="424374.159004274">
+                    Pennsylvania
+                </option>
+                <option value="437137.01689695695">
+                    Puerto Rico
+                </option>
+                <option value="500215.48939045815">
+                    Rhode Island
+                </option>
+                <option value="18950.0">
+                    South Carolina
+                </option>
+                <option value="34900.0">
+                    Tennessee
+                </option>
+                <option value="457210.1499569522">
+                    Vermont
+                </option>
+                <option value="807238.7351308485">
+                    Virgin Islands
+                </option>
+                <option value="362064.51612903224">
+                    Virginia
+                </option>
+                <option value="62500.0">
+                    West Virginia
+                </option>
+                <option value="535000.0">
+                    Wyoming
+                </option>
+            </select>
+        </div>
+
+         <div class="mb-3">
+            <label class="form-label">House Size</label>
+            <input class="form-control" type="house_size" name="house_size"
+                placeholder="House Size" min='0' max='5000'/>
+        </div>
+
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+
+        </body>
+
+
+</html>

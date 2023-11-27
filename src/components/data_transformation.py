@@ -85,10 +85,7 @@ class DataTransformation:
             test_arr = np.c_[input_feature_test_df, np.array(target_feature_test_df)]
 
 
-            return (
-                train_arr,
-                test_arr,
+            return (train_arr,test_arr)
 
-            )
         except Exception as e:
             raise CustomException(e,sys)
